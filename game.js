@@ -59,10 +59,13 @@ function buttonClick(event) {
       $("h1").text("Level " + level);
       newColor = nextColor();
       gamePattern.push(newColor);
-      showTile(newColor);
+      setTimeout(() => {
+        showTile(newColor);
       playMusic(newColor);
       userPattern = [];
       index = 0;
+      }, 100);
+      
     }
   } else {
     showTile(button);
