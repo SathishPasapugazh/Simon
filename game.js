@@ -74,16 +74,16 @@ function buttonClick(event) {
       playMusic(newColor);
       userPattern = [];
       index = 0;
-      }, 800);
+      }, 2000);
       
     }
   } else {
     showTile(button);
     playMusic("wrong");
     $("body").addClass("game-over");
-    setInterval(() => {
+    setTimeout(() => {
       $("body").removeClass("game-over");
-    }, 100);
+    }, 500);
     $("h1").text("Game over");
     userPattern = [];
     gamePattern = [];
