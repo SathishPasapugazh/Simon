@@ -37,14 +37,14 @@ function keyboardPressed() {
 
 function showTile(key) {
   $("#" + key).addClass("pressed");
-  setInterval(() => {
+  setTimeout(() => {
     $("#" + key).removeClass("pressed");
   }, 100);
 }
 
 function showNewtile(key){
    $("#" + key).fadeOut(100);
-  setInterval(() => {
+  setTimeout(() => {
     $("#" + key).fadeIn();
   }, 100);
  }
