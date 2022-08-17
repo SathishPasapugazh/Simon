@@ -22,7 +22,7 @@ function keyboardPressed() {
   ) {
     var startLevel = ++level;
     $("h1").text("Level " + startLevel);
-    showTile(newColor);
+    showNewtile(newColor);
     playMusic(newColor);
     gamePattern.push(newColor);
   }
@@ -42,6 +42,13 @@ function showTile(key) {
   }, 100);
 }
 
+function showNewtile(key){
+   $("#" + key).fadeOut(100);
+  setInterval(() => {
+    $("#" + key).fadeIn();
+  }, 100);
+ }
+
 function playMusic(key) {
   var sound = new Audio("sounds/" + key + ".mp3");
   sound.play();
@@ -50,8 +57,11 @@ function buttonClick(event) {
   var button = event.target.id;
   userPattern.push(button);
   if (userPattern[index] === gamePattern[index]) {
-    showTile(button);
+    setTimeout(() => {
+      showTile(button);
     playMusic(button);
+    }, 500);
+    
     if (userPattern.length !== gamePattern.length) {
       ++index;
     } else {
@@ -60,11 +70,11 @@ function buttonClick(event) {
       newColor = nextColor();
       gamePattern.push(newColor);
       setTimeout(() => {
-        showTile(newColor);
+        showNewtile(newColor);
       playMusic(newColor);
       userPattern = [];
       index = 0;
-      }, 100);
+      }, 800);
       
     }
   } else {
