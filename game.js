@@ -64,18 +64,17 @@ function buttonClick(event) {
     
     if (userPattern.length !== gamePattern.length) {
       ++index;
-    } else {
+    } else {      
       ++level;
-      $("h1").text("Level " + level);
       newColor = nextColor();
       gamePattern.push(newColor);
-      setTimeout(() => {
+      setTimeout(() => {        
         showNewtile(newColor);
       playMusic(newColor);
       userPattern = [];
       index = 0;
-      }, 2000);
-      
+      $("h1").text("Level " + level);
+      }, 1500);      
     }
   } else {
     showTile(button);
