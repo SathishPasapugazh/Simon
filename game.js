@@ -47,10 +47,7 @@ function showTile(key) {
 }
 
 function showNewtile(key){
-   $("#" + key).fadeOut(100);
-  setTimeout(() => {
-    $("#" + key).fadeIn();
-  }, 100);
+   $("#" + key).fadeIn(100).fadeOut(100).fadeIn(100);
  }
 
 function playMusic(key) {
