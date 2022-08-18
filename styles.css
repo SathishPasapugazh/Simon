@@ -11,31 +11,37 @@ body {
 }
 
 #start {
-  font-family: 'Press Start 1P', cursive;
-  font-size: 3rem;
-  margin:  5%;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2rem;
+  display:flex;
   color: #FEF2BF;
+  margin-top: 230px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border: 10px solid black;
+  text-align: center;
 }
 
 .container {
-  display: block;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-item: center;
+  height: 50vh;
+  width: auto;
   margin: auto;
+  flex-direction: row;
 
 }
-.start-btn {
-  margin: 25px;
-  display: inline-block;
-  height: 70px;
-  width: 150px;
-  border: 10px solid black;
+.start-btn {    
+  padding: 10px 10px;
   border-radius: 20%;
-  background-color: black;
+  background-color: purple;
 }
 
 .btn {
   margin: 25px;
-  display: inline-block;
   height: 200px;
   width: 200px;
   border: 10px solid black;

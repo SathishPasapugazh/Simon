@@ -14,6 +14,7 @@ var newColor = nextColor();
 
 $("body").on("keydown", keyboardPressed);
 $(".btn").click(buttonClick);
+$(".start-btn").click(keyboardPressed);
 
 function keyboardPressed() {
   if (
@@ -55,7 +56,7 @@ function playMusic(key) {
 }
 function buttonClick(event) {
   var button = event.target.id;
-  userPattern.push(button);
+  userPattern.push(button);  
   if (userPattern[index] === gamePattern[index]) {
     setTimeout(() => {
       showTile(button);
