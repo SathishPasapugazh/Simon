@@ -1,7 +1,8 @@
 body {
+  display: flex;
   text-align: center;
   background-color: #011F3F;
-  height: 100vh;
+  height: 50vh;
 }
 
 #level-title {
