@@ -12,14 +12,14 @@ function nextColor() {
 
 var newColor = nextColor();
 
-$("body").on("keydown", keyboardPressed);
+//$("body").on("keydown", keyboardPressed);
 $(".btn").click(buttonClick);
-$(".start-btn").click(keyboardPressed);
+$(".start-btn").click(startPressed);
 
-function keyboardPressed() {
+function startPressed() {
   gamePattern.push(newColor);
   if (
-    $("h1").text() === "Press A Key to Start" ||
+    $("h1").text() === "" ||
     $("h1").text() === "Game over"
   ) {
     var startLevel = ++level;
