@@ -28,7 +28,14 @@ function startPressed() {
     setTimeout(() => {
       showNewtile(newColor);
       playMusic(newColor);
-    }, 500);         
+    }, 500);
+    $(".start-btn").text("STOP") ;        
+  }else if ($(".start-btn").text()==="STOP"){
+    userPattern = [];
+    gamePattern = [];
+    level = 0;
+    $("h1").text("");
+    $(".start-btn").text("START");
   }
 }
 
@@ -85,6 +92,7 @@ function buttonClick(event) {
       $("body").removeClass("game-over");
     }, 500);
     $("h1").text("Game over");
+    $(".start-btn").text("START");
     userPattern = [];
     gamePattern = [];
     level = 0;
