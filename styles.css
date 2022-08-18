@@ -1,6 +1,7 @@
 body {
   text-align: center;
   background-color: #011F3F;
+  height: 100vh;
 }
 
 #level-title {
@@ -12,36 +13,28 @@ body {
 
 #start {
   font-family: 'Press Start 2P', cursive;
-  font-size: 2rem;
-  display:flex;
+  font-size: 3rem;
   color: #FEF2BF;
-  margin-top: 230px;
-  margin-left: 0px;
-  margin-right: 0px;
-  border-left-width: 0px;
-  border-right-width: 0px;
-  border: 10px solid black;
-  text-align: center;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-item: center;
-  height: 50vh;
-  width: auto;
+  display: block;
+  width: 50%;
   margin: auto;
-  flex-direction: row;
 
 }
-.start-btn {    
-  padding: 10px 10px;
+.start-btn {
+  display: inline-block;
+  border: 10px solid black;
   border-radius: 20%;
   background-color: purple;
+  padding: 10px 10px;
+  text-align: center;
 }
 
 .btn {
   margin: 25px;
+  display: inline-block;
   height: 200px;
   width: 200px;
   border: 10px solid black;

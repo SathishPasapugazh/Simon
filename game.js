@@ -17,15 +17,18 @@ $(".btn").click(buttonClick);
 $(".start-btn").click(keyboardPressed);
 
 function keyboardPressed() {
+  gamePattern.push(newColor);
   if (
     $("h1").text() === "Press A Key to Start" ||
     $("h1").text() === "Game over"
   ) {
     var startLevel = ++level;
     $("h1").text("Level " + startLevel);
-    showNewtile(newColor);
-    playMusic(newColor);
-    gamePattern.push(newColor);
+    showTile("start")
+    setTimeout(() => {
+      showNewtile(newColor);
+      playMusic(newColor);
+    }, 500);         
   }
 }
 
